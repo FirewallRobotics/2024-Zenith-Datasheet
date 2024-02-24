@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes,maximum-scale=1.0">
+    <title>Orange Pi PC - Orangepi</title>
+    <meta name="keywords" content="Orange Pi,Orange Pi PC">
+    <meta name="description" content="Orange Pi PC">
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/swiper.min (2).css">
+    <link rel="stylesheet" href="../../../../css/new_common.css">
+    <link rel="stylesheet" href="../css/new-details-and-service.css">
+    <link rel="stylesheet" href="../../../../css/media-style.css">
+</head>
+
+<body>
+    <!-- 低版本浏览器提示弹窗 start -->
+    <div id="browser-modal">
+        <div class="browser-modal-cover"></div>
+        <div class="browser-content">
+            <div class="browser-text">
+                <div class="browser-czdjk-logo"></div>
+                <h3 class="browser-text-title">请升级浏览器版本</h3>
+                <p class="browser-text-desc">你正在使用旧版本浏览器。请升级浏览器以获得更好的体验。</p>
+            </div>
+            <div class="browser-list">
+                <div class="browser-item"><a href="//www.google.com/chrome" target="_blank">
+                        <div class="browser-pic browser-i-c"></div>
+                        <h4>Chrome</h4>
+                    </a></div>
+                <div class="browser-item"><a href="//www.firefox.com/" target="_blank">
+                        <div class="browser-pic browser-i-f"></div>
+                        <h4>Firefox</h4>
+                    </a></div>
+                <div class="browser-item"><a href="//www.apple.com/safari/" target="_blank">
+                        <div class="browser-pic browser-i-s"></div>
+                        <h4>Safari</h4>
+                    </a></div>
+                <div class="browser-item"><a href="//www.microsoft.com/en-us/windows/microsoft-edge" target="_blank">
+                        <div class="browser-pic browser-i-e"></div>
+                        <h4>Edge</h4>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    <!-- 低版本浏览器提示弹窗 end -->
+    <!-- 头部开始 -->
+    <div id="header" class="d-none d-xl-flex d-xxl-flex">
+        <h1 class="logo">
+            <a href="../../../../index.html" class="d-inline-block">
+                <img src="../../../../img/logo.png" alt="logo" class="img-fiuid">
+            </a>
+        </h1>
+        <div class="header-nav">
+            <div id="nav" class="nav d-flex justify-content-between align-items-center">
+                <li class="nLi position-relative text-center">
+                    <a href="../index.html" class="d-inline-block">Hardware</a>
+                </li>
+                <li class="nLi position-relative text-center">
+                    <a href="../../../softWare/orangePiOS/index.html" class="d-inline-block">Software</a>
+                    <!-- <ul class="sub position-absolute">
+                        <li onClick="jumpToPage('../../../softWare/orangePiOS/index.html')">
+                            Orange Pi OS
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="nLi position-relative text-center"><a href="../../../customizedServices/index.html"
+                        class="d-inline-block">Customized services</a></li>
+
+                <li class="nLi position-relative text-center">
+                    <a href="javascript:void(0)" onmouseenter="showSubMenu(event)" class="d-inline-block">News</a>
+                    <ul class="sub  position-absolute">
+                        <li onClick="jumpToPage('../../../news/news.html')">
+                            Company News
+                        </li>
+                        <li onClick="jumpToPage('../../../news/video.html')">
+                            Video
+                        </li>
+                        <li onClick="jumpToPage('../../../news/activity.html')">
+                            Events
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="nLi position-relative text-center"><a href="http://www.orangepi.org/orangepibbsen/"
+                        class="d-inline-block" target="_blank">Forums</a></li>
+
+
+                <li class="nLi position-relative text-center">
+                    <a href="javascript:void(0)" class="d-inline-block" onmouseenter="showSubMenu(event)">About us</a>
+                    <ul class="sub position-absolute">
+                        <li onClick="jumpToPage('../../../aboutUs/index.html')">
+                            About Orange Pi
+                        </li>
+                        <li onClick="jumpToPage('../../../dealerRecruitment/index.html')">
+                            Agent Recruitment</li>
+                    </ul>
+                </li>
+                <li class="nLi position-relative text-center">
+                    <a href="javascript:void(0)" class="d-inline-block">Service & Download</a>
+                    <ul class="sub   position-absolute">
+                        <li onClick="jumpToPage('../../../serviceAndSupport/index.html')">
+                            Download
+                        </li>
+                        <li onClick="jumpToPage('https://github.com/orangepi-xunlong')">
+                            Github
+                        </li>
+                        <li onClick="jumpToPage('http://wiki.orangepi.org')">
+                            Wiki
+                        </li>
+                        <li onClick="jumpToPage('http://www.orangepi.org/orangepiwiki/index.php/Third_Party_Images')">
+                            Third Party Images
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nLi d-flex align-items-center position-relative text-center">
+                    <a class="EN" href="http://www.orangepi.org/" class="d-inline-block">EN</a>
+                    /
+                    <a href="http://www.orangepi.cn/" class="CH current d-inline-block">中文</a>
+                </li>
+            </div>
+        </div>
+    </div>
+    <!-- 移动端 -->
+    <div id="header" class="d-flex justify-content-between align-items-center d-xl-none d-xxl-none">
+        <h1 class="logo mobile-logo">
+            <a href="../../../../index.html" class="d-inline-block">
+                <img src="../../../../img/logo.png" alt="logo" class="img-fiuid">
+            </a>
+        </h1>
+        <div class="mobile-menu-img">
+            <img src="../../../../img/icon-menu-expand.png" class="fiuid-img icon-top-menu show-nav-menu" alt=""
+                onclick="showNavMenu(event)">
+            <img src="../../../../img/icon-menu-close.png" class="fiuid-img icon-top-menu hidden-nav-menu" alt=""
+                onclick="showNavMenu(event)">
+        </div>
+        <div class="top-menu" id="top-menu">
+            <ul>
+                <li onClick="jumpToPage('../index.html')">
+                    <div>Hardware</div>
+                </li>
+                <li class="hasSubMenu" onClick="jumpToPage('../../../softWare/orangePiOS/index.html')">
+                    <div>Software</div>
+                    <!-- <img src="../../../../img/icon-top-menu-expand.png" alt="" class="top-menu-li-img" id="li-img0">
+                    <ul class="sub" id="li-sub0">
+                        <li onClick="jumpToPage('../../../softWare/orangePiOS/index.html')">Orange Pi OS</li>
+                    </ul> -->
+                </li>
+                <li onClick="jumpToPage('../../../customizedServices/index.html')">
+                    <div>Customized services</div>
+                </li>
+                <li class="hasSubMenu" onClick="showMobileSubMenu(event)">
+                    <div>News</div>
+                    <img src="../../../../img/icon-top-menu-expand.png" alt="" class="top-menu-li-img" id="li-img1">
+                    <ul class="sub" id="li-sub1">
+                        <li onClick="jumpToPage('../../../news/news.html')">Company News</li>
+                        <li onClick="jumpToPage('../../../news/video.html')">Video</li>
+                        <li onClick="jumpToPage('../../../news/activity.html')">Events</li>
+                    </ul>
+                </li>
+                <li onClick="jumpToPage('http://www.orangepi.org/orangepibbsen/')">
+                    <div>Forums</div>
+                </li>
+                <li class="hasSubMenu" onClick="showMobileSubMenu(event)">
+                    <div>About us</div>
+                    <img src="../../../../img/icon-top-menu-expand.png" alt="" class="top-menu-li-img" id="li-img2">
+                    <ul class="sub" id="li-sub2">
+                        <li onClick="jumpToPage('../../../aboutUs/index.html')">About Orange Pi</li>
+                        <li onClick="jumpToPage('../../../dealerRecruitment/index.html')">Agent Recruitment</li>
+                    </ul>
+                </li>
+                <li class="hasSubMenu" onClick="showMobileSubMenu(event)">
+                    <div>Service & Download</div>
+                    <img src="../../../../img/icon-top-menu-expand.png" alt="" class="top-menu-li-img" id="li-img3">
+                    <ul class="sub" id="li-sub3">
+                        <li onClick="jumpToPage('../../../serviceAndSupport/index.html')">Download</li>
+                        <li onClick="jumpToPage('https://github.com/orangepi-xunlong')">Github</li>
+                        <li onclick="jumpToPage('http://wiki.orangepi.org')">Wiki</li>
+                        <li onclick="jumpToPage('http://www.orangepi.org/orangepiwiki/index.php/Third_Party_Images')">Third Party Images</li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="toggle-language text-center">
+                <a href="http://www.orangepi.cn/">中文</a><span> | </span><a href="http://www.orangepi.org/"
+                    class="current-language">EN</a>
+            </div>
+        </div>
+    </div>
+    <!-- 头部结束 -->
+    <div class="top d-none d-xl-flex d-xxl-flex">
+        <div class="top-left">
+            <a href="./Orange-Pi-PC.html" class="overView current-product-page"><span>Overview</span></a>
+            <a href="../service-and-support/Orange-Pi-PC.html" class="service-and-support"><span>Download</span></a>
+        </div>
+        <div class="top-middle">
+            <h3>Orange Pi PC</h3>
+        </div>
+        <div class="top-right">
+            <div class="buy-now">
+                <span>Aliexpress Store BUY</span>
+                <div class="aliexpress-slide-box slide-box">
+                    <div class="shop-link">
+                        <a style="position: relative;"
+                            href="https://www.aliexpress.com/item/3256804181744510.html?spm=a2g0o.productlist.0.0.70bc2a2ds8gu40&algo_pvid=d849287b-16ef-4686-a725-d9b440468add&algo_exp_id=d849287b-16ef-4686-a725-d9b440468add-10&pdp_ext_f=%7B%22sku_id%22%3A%2212000028929966733%22%7D&pdp_npi=2%40dis%21USD%21%2127.99%21%21%21%21%21%400b86d80216550845317807390eb1a1%2112000028929966733%21sea">
+                            <span class="small-triangle"></span>
+                            Purchase link 1</a>
+                        <a
+                            href="https://pt.aliexpress.com/item/1005001689152635.html?spm=a2g03.12010612.8148356.11.6387100eUL9gv9">Purchase
+                            link 2</a>
+                        <a href="https://www.aliexpress.com/item/3256804414060090.html">Purchase link 3</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <a class="buy-now ml8" href="https://www.amazon.com/dp/B07ZYZ4SPR"><span>Amazon Store BUY</span></a> -->
+            <div class="buy-now ml8">
+                <span>Amazon Store BUY</span>
+                <div class="aliexpress-slide-box slide-box" style="margin-left: 165px;">
+                    <div class="shop-link">
+                        <a style="position: relative;"
+                            href="https://www.amazon.com/dp/B07ZYZ4SPR">
+                            <span class="small-triangle"></span>
+                            Purchase link 1</a>
+                        <a href="https://www.amazon.com/dp/B0B9NFZ815?ref=myi_title_dp">Purchase
+                            link 2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-top d-flex d-xl-none d-xxl-none justify-content-between align-items-center">
+        <div class="mobile-top-left">
+            <a href="./Orange-Pi-PC.html" class="mobile-current-product-page"><span>Overview</span></a>
+            <a href="../service-and-support/Orange-Pi-PC.html"><span>Download</span></a>
+        </div>
+        <div class="mobile-top-right d-flex align-items-center">
+            <a href="javascript:void(0)" onClick="showShoppingMessageBox2('https://www.aliexpress.com/item/3256804181744510.html?spm=a2g0o.productlist.0.0.70bc2a2ds8gu40&algo_pvid=d849287b-16ef-4686-a725-d9b440468add&algo_exp_id=d849287b-16ef-4686-a725-d9b440468add-10&pdp_ext_f=%7B%22sku_id%22%3A%2212000028929966733%22%7D&pdp_npi=2%40dis%21USD%21%2127.99%21%21%21%21%21%400b86d80216550845317807390eb1a1%2112000028929966733%21sea',
+                'https://pt.aliexpress.com/item/1005001689152635.html?spm=a2g03.12010612.8148356.11.6387100eUL9gv9',
+                'https://www.aliexpress.com/item/3256804414060090.html',
+                'https://www.amazon.com/dp/B07ZYZ4SPR',
+                'https://www.amazon.com/dp/B0B9NFZ815?ref=myi_title_dp')">
+                <img src="../../../../img/icon-shop-car.png" alt="" class="icon-shop-car">
+                <img src="../../../../img/icon-shop-car-white.png" alt="" class="icon-shop-car-white">
+                <span>BUY NOW</span>
+            </a>
+        </div>
+    </div>
+    <div id="banner" class="d-flex mobile-details-page-banner">
+        <h3>Orange Pi PC</h3>
+        <img src="../../../../img/img4/banner-PC.jpg" alt="">
+    </div>
+    <!-- 主体部分 -->
+    <div id="main">
+        <div class="main-top-intro">
+            <p>Orange Pi PC is an open-source single-board computer .It uses the Allwinner H3 SoC with Quad-core
+                Cortex-A7, has 1GB LPDDR3 SDRAM, and can run Android 4.4, Ubuntu, Debian Image.</p>
+        </div>
+        <div class="product-intro">
+            <h3>Product introduction</h3>
+            <div class="ul-list">
+                <ul>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-cpu.png" alt="">
+                        <div>Cortex-A7</div>
+                    </li>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-memory.png" alt="">
+                        <div>1GB DDR3 SDRAM</div>
+                    </li>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-HDMI.png" alt="">
+                        <div>HDMI output</div>
+                    </li>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-cameras-144.png" alt="">
+                        <div>CSI camera port</div>
+                    </li>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-usb2.0-144.png" alt="">
+                        <div>3 * USB2.0</div>
+                    </li>
+
+
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-DC.png" alt="">
+                        <div>Powered through DC</div>
+                    </li>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-tf-144.png" alt="">
+                        <div>TF card</div>
+                    </li>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-ethernet-network.png" alt="">
+                        <div>100M Ethernet port</div>
+                    </li>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-low level-144.png" alt="">
+                        <div>40pin headers</div>
+                    </li>
+                    <li>
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon-system-144.png" alt="">
+                        <div>Multiple operating systems</div>
+                    </li>
+                </ul>
+
+            </div>
+            <p>Orange Pi PC offers a range of different ports, including CSI camera port ,HDMI output, 40pin headers,
+                100M Ethernet port,USB2.0,etc. It is powered through DC.
+            </p>
+        </div>
+        <div class="r1-plus-lts-router-product-use">
+            <div class="d-flex">
+                <img src="../../../../img/computersAndMmicrocontrollers/PC/product.png" alt="">
+                <div>
+                    <p>Orange Pi PC is for anyone who wants to start creating with technology- not just consuming it.
+                        lt's a simple, fun, useful tool that you can use to start taking control of the world around
+                        you.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="hardware-specification">
+            <h3>Hardware specification</h3>
+            <table>
+                <tr>
+                    <td>CPU</td>
+                    <td>H3 Quad-core Cortex-A7 H.265/HEVC 4K</td>
+                </tr>
+                <tr>
+                    <td>GPU</td>
+                    <td class="td-list">
+                        • Mali400MP2 GPU @600MHz <br>
+                        • Supports OpenGL ES 2.0
+                    </td>
+                </tr>
+                <tr>
+                    <td>Memory (SDRAM)</td>
+                    <td>
+                        1GB DDR3 (shared with GPU)</td>
+                </tr>
+                <tr>
+                    <td>Onboard Storage</td>
+                    <td>TF card (Max. 32GB)</td>
+                </tr>
+                <tr>
+                    <td>Onboard Network</td>
+                    <td>10/100M Ethernet RJ45</td>
+                </tr>
+                <tr>
+                    <td>Video Input</td>
+                    <td class="td-list">• A CSI input connector Camera: <br>
+
+                        • Supports 8-bit YUV422 CMOS sensor interface <br>
+
+                        • Supports CCIR656 protocol for NTSC and PAL <br>
+
+                        • Supports SM pixel camera sensor <br>
+
+                        • Supports video capture solution up to 1080p@30fps</td>
+                </tr>
+                <tr>
+                    <td>Audio Input</td>
+                    <td>MIC</td>
+                </tr>
+                <tr>
+                    <td>Video Outputs</td>
+                    <td class="td-list">• Supports HDMI output with HDCP <br>
+                        • Supports HDMI CEC <br>
+                        • Supports HDMI 30 function <br>
+                        • Integrated CVBS <br>
+                        • Supports simultaneous output of HDMI and CVBS</td>
+                </tr>
+                <tr>
+                    <td>Audio Output</td>
+                    <td>3.5 mm Jack and HDMI</td>
+                </tr>
+                <tr>
+                    <td>Power Source</td>
+                    <td>DC input can supply power, but USB OTG input don’t supply power</td>
+                </tr>
+                <tr>
+                    <td>USB 2.0 Ports</td>
+                    <td>Three USB 2.0 HOST, one USB 2.0 OTG</td>
+                </tr>
+                <tr>
+                    <td>Buttons</td>
+                    <td>Power Button(SW4)</td>
+                </tr>
+                <tr>
+                    <td>Low-level peripherals</td>
+                    <td>40 Pins Header</td>
+                </tr>
+                <tr>
+                    <td>GPIO(1x3) pin</td>
+                    <td>UART, Ground.</td>
+                </tr>
+                <tr>
+                    <td>LED</td>
+                    <td>Power led & Status led</td>
+                </tr>
+                <tr>
+                    <td>Key</td>
+                    <td>IR input, Power</td>
+                </tr>
+                <tr>
+                    <td>Supported OS</td>
+                    <td>Android Ubuntu, Debian Image</td>
+                </tr>
+            </table>
+            <h3 class="mt40">Interface definition</h3>
+            <table width="100%" border="1" bordercolor="#d8d8d8" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>Product size</td>
+                    <td>85 mm × 55mm </td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>38g</td>
+                </tr>
+            </table>
+        </div>
+        <div class="product-view">
+            <h3>Top view</h3>
+            <img src="../../../../img/computersAndMmicrocontrollers/PC40.png" alt="">
+            <h3 class="bottom-view">Bottom view</h3>
+            <img src="../../../../img/computersAndMmicrocontrollers/PC/Rectangle 641.png" alt="">
+        </div>
+        <div class="product-pinout-diagram">
+            <h3>Orange Pi PC v1.2 pinout diagram</h3>
+            <img src="../../../../img/computersAndMmicrocontrollers/PC/Rectangle 741.png" alt="">
+        </div>
+        <div class="item-list">
+            <ul>
+                <li>
+                    <div class="icon-intro">
+                        <img src="../../../../img/computersAndMmicrocontrollers/icon.png" alt="">
+                        <div class="intro">
+                            <h3>Completely open source maker artifact</h3>
+                        </div>
+                    </div>
+                    <div class="img-intro-list">
+                        <ul>
+                            <li>
+                                <img src="../../../../img/computersAndMmicrocontrollers/3 LTS/Rectangle 681.png" alt="">
+                                <p>Orange Pi PC runs Android</p>
+                            </li>
+                            <li>
+                                <img src="../../../../img/computersAndMmicrocontrollers/3 LTS/Rectangle 682.png" alt="">
+                                <p>Orange Pi PC runs Ubuntu </p>
+                            </li>
+                            <li>
+                                <img src="../../../../img/computersAndMmicrocontrollers/3 LTS/Rectangle 683.png" alt="">
+                                <p>Orange Pi PC runs Debian</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="product-display">
+            <h3>Product display</h3>
+            <ul>
+                <li>
+                    <img src="../../../../img/computersAndMmicrocontrollers/PC/Rectangle 746.png" alt="">
+                    <div class="position-circle-group left-top">
+                        <span class="front-circle-before circle"></span>
+                        <span class="front position-span">Front</span>
+                        <span class="front-circle-after circle"></span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../../../../img/computersAndMmicrocontrollers/PC/Rectangle 747.png" alt="">
+                    <div class="position-circle-group right-top">
+                        <span class="back-circle-before circle"></span>
+                        <span class="back position-span">Back</span>
+                        <span class="back-circle-after circle"></span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../../../../img/computersAndMmicrocontrollers/PC/Rectangle 748.png" alt="">
+                    <div class="position-circle-group left-bottom">
+                        <span class="angle-circle-before-1 circle"></span><span class="angle-1 position-span">45°
+                            angle</span><span class="angle-circle-after-1 circle"></span>
+                    </div>
+                </li>
+                <li>
+                    <img src="../../../../img/computersAndMmicrocontrollers/PC/Rectangle 749.png" alt="">
+                    <div class="position-circle-group right-bottom">
+                        <span class="angle-circle-before-2 circle"></span><span class="angle-2 position-span">45°
+                            angle</span><span class="angle-circle-after-2 circle"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="more-function">
+            <h3>What can l do with Orange Pi PC?</h3>
+            <p>You can use it to build-…</p>
+            <div class="swiper-box-wrap position-relative">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../../../../img/computersAndMmicrocontrollers/gxwifi.png" alt="">
+                            <div>Shared WiFi Devices</div>
+                        </div>
+						<div class="swiper-slide">
+                            <img src="../../../../img/computersAndMmicrocontrollers/youxiji00.png" alt="">
+                            <div>Game Consoles</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../../../../img/computersAndMmicrocontrollers/3ddy.png" alt="">
+                                <div>3D Printing</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../../../../img/computersAndMmicrocontrollers/bcxx.png" alt="">
+                                <div>Programming Learning</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../../../../img/computersAndMmicrocontrollers/sjxc.png" alt="">
+                                <div>Vision Carts</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../../../../img/computersAndMmicrocontrollers/wlsxj.png" alt="">
+                                <div>Webcams</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../../../../img/computersAndMmicrocontrollers/zhifushebei.png" alt="">
+                                <div>Payment Device</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="../../../../img/computersAndMmicrocontrollers/jiankangjcy.png" alt="">
+                                <div>Advertising Machines</div>
+                            </a>
+                        </div>
+                      
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-bottom-p">
+            <p>Pretty much anything else, because Orange Pi PC is open source</p>
+        </div>
+    </div>
+    <!-- 底部开始 -->
+    <div id="footer" class="d-none d-xl-block d-xxl-block">
+        <div class="footer-inner-content">
+            <div class="footer-left">
+                <img src="../../../../img/orange-footerlogo.png" alt="">
+            </div>
+            <div class="footer-right">
+                <div class="footer-right-top">
+                    <dl>
+                        <dt>About Orange Pi</dt>
+                        <dd><a href="../../../aboutUs/index.html">About us</a></dd>
+                        <dd><a href="../../../aboutUs/index.html#contact-us">Contact us</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>Orange Pi Store</dt>
+                        <dd>AliExpress-
+                            <a href="https://www.aliexpress.com/store/1102114720" class="aliexpressLink"
+                                target="_blank">
+                                Link1</a>
+                            <a href="https://www.aliexpress.com/store/1100997172?spm=a2g0o.detail.1000007.1.35f03185hcgeLZ"
+                                class="aliexpressLink" target="_blank">
+                                Link2</a>
+                            <a href="https://www.aliexpress.com/store/1102146462?spm=a2g0o.detail.1000007.1.36ac3ff4vzou86"
+                                class="aliexpressLink" target="_blank">
+                                Link3</a>
+                        </dd>
+                        <dd>Amazon</dd>
+                    </dl>
+                    <dl>
+                        <dt>Service & Support</dt>
+                        <dd><a href="../../../serviceAndSupport/index.html">Documentation</a></dd>
+                        <dd><a href="../../../serviceAndSupport/index.html">Downloads</a></dd>
+                    </dl>
+                    <dl class="no-mr">
+                        <dt>Contact us</dt>
+                        <dd>Tel: (86)0755-26765483</dd>
+                        <dd>Email:zhao_steven@263.net (Consulting service)</dd>
+                        <dd>SKYPE ID: zhaoyifan_steven</dd>
+                    </dl>
+                </div>
+                <div class="footer-right-bottom footer-right-bottom-item">
+                    <span class="follow-us">Follow us</span>
+                    <a href="https://twitter.com/orangepixunlong" target="_blank">Twitter</a>
+                    <a href="https://www.facebook.com/OrangePiOfficial/" target="_blank">Facebook</a>
+                    <a href="https://www.youtube.com/channel/UCO-3JwT2RKWzQzQzv7ko4jA" target="_blank">YouTube</a>
+                    <a href="https://www.instagram.com/orangepixunlong/" target="_blank">Instagram</a>
+                </div>
+                <div class="footer-right-bottom-item">
+                    <span class="follow-us">Social group</span>
+                    <a href="https://t.me/OPi_official_group" target="_blank">Telegram Group 1</a>
+                    <a href="https://t.me/Orange_Pi_Devices" target="_blank">Telegram Group 2</a>
+                    <a href="https://www.facebook.com/groups/1620838934806045/" target="_blank">Facebook Group 1</a>
+                    <a href="https://www.facebook.com/groups/1483270805309190/" target="_blank">Facebook Group 2</a>
+                    <a href="https://www.facebook.com/groups/2691142251169626/" target="_blank">Facebook Group 3</a>
+                    <a href="https://discord.gg/hE5wdMPm7z" class="last-item" target="_blank">Discord</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 移动端 -->
+    <div id="mobile-footer" class="d-block d-xl-none d-xxl-none">
+        <ul>
+            <li onClick="showFooterSubMenu(event)" class="position-relative">
+                <div>About Orange Pi</div>
+                <img src="../../../../img/icon-top-menu-expand.png" alt="" id="footer-menu-li-img0"
+                    class="footer-menu-li-img fiuid-img position-absolute">
+                <ul class="sub" id="footer-menu-li-sub0">
+                    <li onClick="jumpToPage('../../../aboutUs/index.html')">About us</li>
+                    <li onClick="jumpToPage('../../../aboutUs/index.html#contact-us')">Contact us</li>
+                </ul>
+            </li>
+            <li onClick="showFooterSubMenu(event)" class="position-relative">
+                <div>Orange Pi Store</div>
+                <img src="../../../../img/icon-top-menu-expand.png" alt="" id="footer-menu-li-img1"
+                    class="footer-menu-li-img fiuid-img position-absolute">
+                <ul class="sub" id="footer-menu-li-sub1">
+                    <li onClick="jumpToPage('https://www.aliexpress.com/store/1102114720')">AliExpress-Link1</li>
+                    <li
+                        onclick="jumpToPage('https://www.aliexpress.com/store/1100997172?spm=a2g0o.detail.1000007.1.35f03185hcgeLZ')">
+                        AliExpress-Link2</li>
+                    <li
+                        onclick="jumpToPage('https://www.aliexpress.com/store/1102146462?spm=a2g0o.detail.1000007.1.36ac3ff4vzou86')">
+                        AliExpress-Link3</li>
+                    <li>Amazon</li>
+                </ul>
+            </li>
+            <li onClick="showFooterSubMenu(event)" class="position-relative">
+                <div>Service & Support</div>
+                <img src="../../../../img/icon-top-menu-expand.png" alt="" id="footer-menu-li-img2"
+                    class="footer-menu-li-img fiuid-img position-absolute">
+                <ul class="sub" id="footer-menu-li-sub2">
+                    <li onClick="jumpToPage('../../../serviceAndSupport/index.html')">Documentation</li>
+                    <li onClick="jumpToPage('../../../serviceAndSupport/index.html')">Downloads</li>
+                </ul>
+            </li>
+            <li onClick="showFooterSubMenu(event)" class="position-relative">
+                <div>Contact us</div>
+                <img src="../../../../img/icon-top-menu-expand.png" alt="" id="footer-menu-li-img3"
+                    class="footer-menu-li-img fiuid-img position-absolute">
+                <div class="sub" id="footer-menu-li-sub3">
+                    <div>
+                        <span>Tel</span>: (86)0755-26765483<br>
+                        <span>Email</span>: zhao_steven@263.net (Consulting service)<br>
+                        <span style="display: inline;">SKYPE ID</span>: zhaoyifan_steven<br>
+                    </div>
+                </div>
+            </li>
+            <li onClick="showFooterSubMenu(event)" class="position-relative">
+                <div>Social group</div>
+                <img src="../../../../img/icon-top-menu-expand.png" alt="" id="footer-menu-li-img4"
+                    class="footer-menu-li-img fiuid-img position-absolute">
+                <ul class="sub" id="footer-menu-li-sub4">
+                    <li onClick="jumpToPage('https://t.me/OPi_official_group')">Telegram Group 1</li>
+                    <li onClick="jumpToPage('https://t.me/Orange_Pi_Devices')">Telegram Group 2</li>
+                    <li onClick="jumpToPage('https://www.facebook.com/groups/1620838934806045/')">Facebook Group 1</li>
+                    <li onClick="jumpToPage('https://www.facebook.com/groups/1483270805309190/')">Facebook Group 2</li>
+                    <li onClick="jumpToPage('https://www.facebook.com/groups/2691142251169626/')">Facebook Group 3</li>
+                    <li onClick="jumpToPage('https://discord.gg/hE5wdMPm7z')">Discord</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="footer-icon-list">
+            <a href="https://twitter.com/orangepixunlong" target="_blank"><img src="../../../../img/icon-twitter.png"
+                    alt=""></a>
+            <a href="https://www.facebook.com/OrangePiOfficial/" target="_blank"><img
+                    src="../../../../img/icon-facebook.png" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCO-3JwT2RKWzQzQzv7ko4jA" target="_blank"><img
+                    src="../../../../img/icon-youtube.png" alt=""></a>
+            <a href="https://www.instagram.com/orangepixunlong/" target="_blank"><img
+                    src="../../../../img/icon-instagram.png" alt=""></a>
+        </div>
+    </div>
+    <!-- 底部结束 -->
+    <!-- 购买弹出框 -->
+    <div class="shopping-message-box">
+        <div class="shopping-message-box-inner-content" style="width: 520px;">
+            <h3>Official Purchase Link</h3>
+            <div class="shopping-icon-list">
+                <a class="item-aliexpress1" id="aliexpress1-link">
+                    <img src="../../../../img/icon-aliexpress.png" alt="">
+                    <p>Aliexpress1</p>
+                </a>
+                <a class="item-aliexpress2" id="aliexpress2-link">
+                    <img src="../../../../img/icon-aliexpress.png" alt="">
+                    <p>Aliexpress2</p>
+                </a>
+
+                <a class="item-aliexpress3" id="aliexpress3-link">
+                    <img src="../../../../img/icon-aliexpress.png" alt="">
+                    <p>Aliexpress3</p>
+                </a>
+                <a class="item-amazon" id="amazon-link">
+                    <img src="../../../../img/icon-amazon.png" alt="">
+                    <p>Amazon1</p>
+                </a>
+                <a class="item-amazon" id="amazon2-link">
+                    <img src="../../../../img/icon-amazon.png" alt="">
+                    <p>Amazon2</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 移动端购买弹出框 -->
+    <div class="mobile-shopping-message-box">
+        <div class="mobile-shopping-message-box-inner-content">
+            <div class="short-line"></div>
+            <h3>Official Purchase Link</h3>
+            <div class="mobile-shop-icon-list">
+                <a class="mobile-item-aliexpress1" id="mobile-aliexpress1-link" style="margin: 0">
+                    <img src="../../../../img/icon-aliexpress.png" alt="">
+                    <p>Aliexpress1</p>
+                </a>
+                <a class="mobile-item-aliexpress2" id="mobile-aliexpress2-link" style="margin: 0">
+                    <img src="../../../../img/icon-aliexpress.png" alt="">
+                    <p>Aliexpress2</p>
+                </a>
+
+                <a class="mobile-item-aliexpress3" id="mobile-aliexpress3-link" style="margin: 0">
+                    <img src="../../../../img/icon-aliexpress.png" alt="">
+                    <p>Aliexpress3</p>
+                </a>
+                <a class="mobile-item-amazon" id="mobile-amazon-link" style="margin: 0">
+                    <img src="../../../../img/icon-amazon.png" alt="">
+                    <p>Amazon1</p>
+                </a>
+                <a class="mobile-item-amazon" id="mobile-amazon2-link" style="margin: 0">
+                    <img src="../../../../img/icon-amazon.png" alt="">
+                    <p>Amazon2</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../js/jquery1.42.min.js"></script>
+    <script src="../../../../js/jquery.SuperSlide.2.1.3.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
+    <script src="../../../../js/swiper.min (2).js"></script>
+    <script src="../../../../js/total.js"></script>
+</body>
+<script type="text/javascript">
+    // 顶部导航
+    /* 一级子菜单 */
+    jQuery("#nav").slide({
+        type: "menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）
+        titCell: ".nLi", //鼠标触发对象
+        targetCell: ".sub", //titCell里面包含的要显示/消失的对象
+        effect: "slideDown", //targetCell下拉效果
+        delayTime: 100, //效果时间
+        triggerTime: 0, //鼠标延迟触发时间（默认150）
+        returnDefault: true, //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+    });
+    // 轮播图
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+
+    window.onload = getShoppingMessageBoxHeight;
+    window.onresize = resizeBannerImage;
+    function resizeBannerImage() {
+        // 获取购买弹出框高度
+        getShoppingMessageBoxHeight();
+        // 轮播图每组个数调整
+        var winW = $(window).width();
+        if ($(window).width() < 600) {
+            /* 这里是要执行的代码 */
+            swiper = new Swiper('.swiper-container', {
+                slidesPerView: 2,
+                spaceBetween: 0,
+                slidesPerGroup: 1,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+    }
+</script>
+
+</html>
